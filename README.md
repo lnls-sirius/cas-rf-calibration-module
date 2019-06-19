@@ -26,7 +26,8 @@ cp services/cas-rf-calibration-module-spi.service /etc/systemd/system
 cp services/cas-rf-calibration-module-ioc.service /etc/systemd/system
 
 systemctl daemon-reload
-systemctl start 
+systemctl start cas-rf-calibration-module-spi.service
+systemctl start cas-rf-calibration-module-ioc.service
 
 systemctl enable cas-rf-calibration-module-spi.service
 systemctl enable cas-rf-calibration-module-ioc.service
