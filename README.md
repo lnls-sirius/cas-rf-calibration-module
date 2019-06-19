@@ -1,4 +1,6 @@
 # Sirius RF calibration module IOC
+Authors: Claudio Carneiro, Eduardo Coelho
+ 
 ## Dependencies
 The following are required
 
