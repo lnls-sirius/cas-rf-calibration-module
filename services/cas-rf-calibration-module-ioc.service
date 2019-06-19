@@ -1,0 +1,20 @@
+[Unit]
+Description=Sirius RF Calibration Module IOC 
+Wants=network-online.target
+After=network-online.target
+
+After=cas-rf-calibration-module-spi.service
+
+[Service]
+Restart=always
+RestartSec=10
+Type=simple
+
+WorkingDirectory=/root/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule
+ExecStart=/usr/bin/procServ -d --chdir /root/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule 20200 ./st.cmd
+
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

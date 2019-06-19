@@ -1,0 +1,18 @@
+[Unit]
+Description=Sirius RF Calibration Module SPI Interface
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Restart=always
+RestartSec=10
+Type=simple
+
+WorkingDirectory=/root/cas-rf-calibration-module/RFCalibrationModuleSPI
+ExecStart=/usr/bin/python /root/cas-rf-calibration-module/RFCalibrationModuleSPI/run.py
+
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
