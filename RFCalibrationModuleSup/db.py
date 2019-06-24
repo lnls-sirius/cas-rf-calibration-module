@@ -10,7 +10,7 @@ record(stringin, "$(P):SaveName"){
 
 record(waveform, "${PV_VALS}"){
     field(DTYP, "stream")
-    field(SCAN, ".1 second")
+    field(SCAN, ".5 second")
     field(DTYP, "stream")
     field(INP,  "@RFCalibrationModule.proto getData $(PORT) $(A)")
     field(FTVL, "FLOAT")
@@ -47,16 +47,26 @@ record(calc, "${PV}${N}_CALC"){
     field(INPF, "${PV}${N}_ADC CP MSS")
 }
 
-record(calc, "${PV}${N}-Mon"){
-    field(CALC, "(A>${MIN})?(A):(-Inf)")
-    field(PREC, "2")
-    field(EGU,  "dBm")
-    field(INPA, "${PV}${N}_CALC CP MSS")
-}
-
 record(ao, "${PV_OFS}${N}-Mon"){
     field(PREC, "2")
+    field(EGU,  "dB")
+    field(VAL,  "0")
+    field(PINI, "YES")
+}
+
+record(calc, "${PV}${N}-Mon"){
+    field(CALC, "(A>${MIN})?(A + B):(-Inf)")
+    field(INPA, "${PV}${N}_CALC CP MSS")
+    field(INPB, "${PV_OFS}${N}-Mon CP MSS")
+    field(PREC, "2")
     field(EGU,  "dBm")
+}
+
+record(calc, "${PV_W}${N}-Mon"){
+    field(CALC, "(10**(A/10))*(1/1000)")
+    field(INPA, "${PV}${N}-Mon CP MSS")
+    field(PREC, "2")
+    field(EGU,  "W")
 }
 ''')
 
@@ -76,7 +86,8 @@ if __name__ == '__main__':
     PV_VALS = 'RA-RaBO01:RF-LLRFCalSys:Vals'
     PV_STAT = 'RA-RaBO01:RF-LLRFCalSys:StatusCalOn'
     PV      = 'RA-RaBO01:RF-LLRFCalSys:PwrdBm'
-    PV_OFS  = 'RA-RaBO01:RF-LLRFCalSys:OFSdBm'
+    PV_W    = 'RA-RaBO01:RF-LLRFCalSys:PwrW'
+    PV_OFS  = 'RA-RaBO01:RF-LLRFCalSys:OFSdB'
     MIN     = str(-42.)
 
     # WF
@@ -90,7 +101,7 @@ if __name__ == '__main__':
     # Power Readings
 
     # Channel 1 (ADC PCB 1, CH1)
-    kwargs = {'N':1, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':1, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 26.307
     kwargs['p2'] = 7.6581
     kwargs['p3'] = -53.648
@@ -99,7 +110,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 2 (ADC PCB 1, CH1)
-    kwargs = {'N':2, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':2, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 29.637
     kwargs['p2'] = -2.9709
     kwargs['p3'] = -39.974
@@ -108,7 +119,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 3 (ADC PCB 1, CH2)
-    kwargs = {'N':3, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':3, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 23.264
     kwargs['p2'] = 17.234
     kwargs['p3'] = -65.181
@@ -117,7 +128,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 4 (ADC PCB 1, CH3)
-    kwargs = {'N':4, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':4, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 29.996
     kwargs['p2'] = -2.412
     kwargs['p3'] = -41.851
@@ -126,7 +137,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 5 (ADC PCB 1, CH4)
-    kwargs = {'N':5, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':5, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 24.592
     kwargs['p2'] = 13.793
     kwargs['p3'] = -60.338
@@ -135,7 +146,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 6 (ADC PCB 1, CH5)
-    kwargs = {'N':6, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':6, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 23.949
     kwargs['p2'] = 15.762
     kwargs['p3'] = -62.507
@@ -144,7 +155,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 7 (ADC PCB 1, CH6)
-    kwargs = {'N':7, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':7, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 25.86
     kwargs['p2'] = 9.2711
     kwargs['p3'] = -56.011
@@ -153,7 +164,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 8 (ADC PCB 1, CH7)
-    kwargs = {'N':8, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':8, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 26.347
     kwargs['p2'] = 6.0158
     kwargs['p3'] = -49.13
@@ -162,7 +173,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 9 (ADC PCB 2, CH0)
-    kwargs = {'N':9, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':9, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 24.396
     kwargs['p2'] = 12.915
     kwargs['p3'] = -57.398
@@ -171,7 +182,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 10 (ADC PCB 2, CH1)
-    kwargs = {'N':10, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':10, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 26.928
     kwargs['p2'] = 5.7414
     kwargs['p3'] = -50.567
@@ -180,7 +191,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 11 (ADC PCB 2, CH2)
-    kwargs = {'N':11, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':11, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 24.27
     kwargs['p2'] = 13.93
     kwargs['p3'] = -59.559
@@ -189,7 +200,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 12 (ADC PCB 2, CH3)
-    kwargs = {'N':12, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':12, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 23.393
     kwargs['p2'] = 17.506
     kwargs['p3'] = -65.01
@@ -198,7 +209,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 13 (ADC PCB 2, CH4)
-    kwargs = {'N':13, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':13, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 25.407
     kwargs['p2'] = 10.57
     kwargs['p3'] = -56.513
@@ -207,7 +218,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 14 (ADC PCB 2, CH5)
-    kwargs = {'N':14, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':14, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 26.805
     kwargs['p2'] = 6.3015
     kwargs['p3'] = -50.449
@@ -216,7 +227,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 15 (ADC PCB 2, CH6)
-    kwargs = {'N':15, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':15, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 24.922
     kwargs['p2'] = 10.916
     kwargs['p3'] = -56.348
@@ -225,7 +236,7 @@ if __name__ == '__main__':
     print(adc.safe_substitute(**kwargs))
 
     # Channel 16 (ADC PCB 2, CH7)
-    kwargs = {'N':16, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS}
+    kwargs = {'N':16, 'MIN': MIN, 'PV':PV, 'PV_VALS':PV_VALS, 'PV_OFS':PV_OFS, 'PV_W':PV_W}
     kwargs['p1'] = 20.502
     kwargs['p2'] = 25.687
     kwargs['p3'] = -73.787

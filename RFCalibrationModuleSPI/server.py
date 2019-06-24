@@ -55,7 +55,6 @@ class Comm():
                 response = ResponseType.NO_RESPONSE
 
                 if command == 'DATA?':
-                    # response = str([1,-40, 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])
                     response = self.rf_cal.read()
                 else:
                     response = ResponseType.UNSUPPORTED_COMMAND

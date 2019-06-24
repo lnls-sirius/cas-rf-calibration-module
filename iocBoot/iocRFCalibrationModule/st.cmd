@@ -29,6 +29,5 @@ set_pass1_restoreFile("$(P).sav")
 cd "${TOP}/iocBoot/${IOC}"
 iocInit
 
-
 cd "${TOP}"
 create_monitor_set("$(TOP)/db/RFCalibrationModule.req", 10, "TOP=$(TOP), SAVENAMEPV=$(P):SaveName")
