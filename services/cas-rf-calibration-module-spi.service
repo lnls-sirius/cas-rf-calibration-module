@@ -10,7 +10,7 @@ Type=simple
 
 WorkingDirectory=/root/cas-rf-calibration-module/RFCalibrationModuleSPI
 ExecStart=/usr/bin/python /root/cas-rf-calibration-module/RFCalibrationModuleSPI/run.py
-
+ExecStartPre=/bin/bash /root/cas-rf-calibration-module/RFCalibrationModuleSPI/cas-rf-calibration-module-spi.service
 StandardOutput=syslog
 StandardError=syslog
 
