@@ -15,7 +15,7 @@ The following are required
 ## Installing
 ```
 cd RFCalibrationModuleSup
-make install-dependencies
+make db
 cd ..
 make
 ```
