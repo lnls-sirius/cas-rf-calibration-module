@@ -12,6 +12,8 @@ Type=simple
 
 WorkingDirectory=/root/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule
 ExecStart=/usr/bin/procServ -d --chdir /root/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule 20200 ./st.cmd
+ExecStartPre=/bin/sleep 10
+ExecStartPre=/bin/bash /root/cas-rf-calibration-module/RFCalibrationModuleSPI/overlay.sh
 
 StandardOutput=syslog
 StandardError=syslog
