@@ -52,3 +52,11 @@ Start the IOC
 cd iocBoot/iocRFCalibrationModule/
 ./st.cmd
 ```
+## Calibration Constants
+In order to modify the calibration constants edit [RFCalibrationModuleSup/db.py](RFCalibrationModuleSup/db.py), update the EPICS database files and restart the IOC
+```
+make clean
+make distclean
+make
+systemctl start cas-rf-calibration-module-ioc.service
+```
