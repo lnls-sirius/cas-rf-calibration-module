@@ -4,16 +4,17 @@ Wants=network-online.target
 After=network-online.target
 
 After=cas-rf-calibration-module-spi.service
+Wants=cas-rf-calibration-module-spi.service
 
 [Service]
 Restart=always
 RestartSec=10
 Type=simple
+User=iocuser
+Group=ioc
 
-WorkingDirectory=/root/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule
-ExecStart=/usr/bin/procServ -d --chdir /root/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule 20200 ./st.cmd
-ExecStartPre=/bin/sleep 10
-ExecStartPre=/bin/bash /root/cas-rf-calibration-module/RFCalibrationModuleSPI/overlay.sh
+WorkingDirectory=/opt/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule
+ExecStart=/usr/local/bin/procServ -L - --allow -f --chdir /opt/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule 20200 ./st.cmd
 
 StandardOutput=syslog
 StandardError=syslog

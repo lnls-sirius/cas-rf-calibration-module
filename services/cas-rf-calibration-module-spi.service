@@ -7,11 +7,11 @@ After=network-online.target
 Restart=always
 RestartSec=10
 Type=simple
+User=iocuser
+Group=ioc
 
-WorkingDirectory=/root/cas-rf-calibration-module/RFCalibrationModuleSPI
-ExecStart=/usr/bin/python /root/cas-rf-calibration-module/RFCalibrationModuleSPI/run.py
-ExecStartPre=/bin/sleep 10
-ExecStartPre=/bin/bash /root/cas-rf-calibration-module/RFCalibrationModuleSPI/overlay.sh
+WorkingDirectory=/opt/cas-rf-calibration-module/RFCalibrationModuleSPI
+ExecStart=/usr/local/bin/procServ -L - --allow -f 20201 /usr/bin/python /opt/cas-rf-calibration-module/RFCalibrationModuleSPI/run.py
 StandardOutput=syslog
 StandardError=syslog
 
