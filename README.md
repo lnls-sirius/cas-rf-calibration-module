@@ -13,6 +13,35 @@ The following are required
 |EPICS_BASE|/opt/epics-R3.15.5/base|
 
 ## Installing
+The user should clone this repo at `/opt`
+### procServ
+Get the procServ-v2.8.0 tar file from [https://github.com/ralphlange/procServ/releases/download/v2.8.0/procServ-2.8.0.tar.gz](procServ-2.8.0)
+
+```
+wget https://github.com/ralphlange/procServ/releases/download/v2.8.0/procServ-2.8.0.tar.gz
+tar -zxvf procServ-2.8.0.tar.gz
+cd procServ-2.8.0
+./configure --enable-access-from-anywhere
+make install
+cd ..
+rm -rf procServ-2.8.0.tar.gz procServ-2.8.0
+```
+### User permission
+This repository should be cloned at /opt
+Make sure that the user iocuser is created and is part of dialout and ioc groups
+Check the repository permisson
+
+```
+useradd  iocuser
+groupadd ioc
+usermod -aG ioc	    iocuser
+usermod -aG gpio    iocuser
+usermod -aG dialout iocuser
+
+chown -R iocuser:ioc cas-rf-calibration-module
+```
+### Compiling
+
 ```
 cd RFCalibrationModuleSup
 make db
