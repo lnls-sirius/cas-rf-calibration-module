@@ -7,8 +7,6 @@ After=network-online.target
 Restart=always
 RestartSec=10
 Type=simple
-User=iocuser
-Group=ioc
 
 WorkingDirectory=/opt/cas-rf-calibration-module/RFCalibrationModuleSPI
 ExecStart=/usr/local/bin/procServ -L - --allow -f 20201 /usr/bin/python /opt/cas-rf-calibration-module/RFCalibrationModuleSPI/run.py
