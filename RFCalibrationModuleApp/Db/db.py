@@ -88,7 +88,7 @@ if __name__ == '__main__':
     PV      = 'RA-RaBO01:RF-LLRFCalSys:PwrdBm'
     PV_W    = 'RA-RaBO01:RF-LLRFCalSys:PwrW'
     PV_OFS  = 'RA-RaBO01:RF-LLRFCalSys:OFSdB'
-    MIN     = str(-42.)
+    MIN     = str(-41.)
 
     # WF
     kwargs = {'PV_STAT':PV_STAT, 'PV_VALS':PV_VALS}

@@ -51,7 +51,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB1-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm1-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm1_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB1-Mon CP MSS")
     field(PREC, "2")
@@ -91,7 +91,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB2-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm2-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm2_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB2-Mon CP MSS")
     field(PREC, "2")
@@ -131,7 +131,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB3-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm3-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm3_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB3-Mon CP MSS")
     field(PREC, "2")
@@ -171,7 +171,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB4-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm4-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm4_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB4-Mon CP MSS")
     field(PREC, "2")
@@ -211,7 +211,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB5-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm5-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm5_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB5-Mon CP MSS")
     field(PREC, "2")
@@ -251,7 +251,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB6-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm6-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm6_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB6-Mon CP MSS")
     field(PREC, "2")
@@ -291,7 +291,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB7-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm7-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm7_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB7-Mon CP MSS")
     field(PREC, "2")
@@ -331,7 +331,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB8-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm8-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm8_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB8-Mon CP MSS")
     field(PREC, "2")
@@ -371,7 +371,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB9-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm9-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm9_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB9-Mon CP MSS")
     field(PREC, "2")
@@ -411,7 +411,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB10-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm10-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm10_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB10-Mon CP MSS")
     field(PREC, "2")
@@ -451,7 +451,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB11-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm11-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm11_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB11-Mon CP MSS")
     field(PREC, "2")
@@ -491,7 +491,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB12-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm12-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm12_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB12-Mon CP MSS")
     field(PREC, "2")
@@ -531,7 +531,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB13-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm13-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm13_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB13-Mon CP MSS")
     field(PREC, "2")
@@ -571,7 +571,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB14-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm14-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm14_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB14-Mon CP MSS")
     field(PREC, "2")
@@ -611,7 +611,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB15-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm15-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm15_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB15-Mon CP MSS")
     field(PREC, "2")
@@ -651,7 +651,7 @@ record(ao, "RA-RaBO01:RF-LLRFCalSys:OFSdB16-Mon"){
 }
 
 record(calc, "RA-RaBO01:RF-LLRFCalSys:PwrdBm16-Mon"){
-    field(CALC, "(A>-42.0)?(A + B):(-Inf)")
+    field(CALC, "(A>-41.0)?(A + B):(-Inf)")
     field(INPA, "RA-RaBO01:RF-LLRFCalSys:PwrdBm16_CALC CP MSS")
     field(INPB, "RA-RaBO01:RF-LLRFCalSys:OFSdB16-Mon CP MSS")
     field(PREC, "2")
