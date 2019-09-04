@@ -15,6 +15,7 @@ Group=ioc
 
 WorkingDirectory=/opt/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule
 ExecStart=/usr/local/bin/procServ -L - --allow -f --chdir /opt/cas-rf-calibration-module/iocBoot/iocRFCalibrationModule 20200 ./st.cmd
+ExecStartPre=/bin/sleep 50
 
 StandardOutput=syslog
 StandardError=syslog

@@ -16,6 +16,13 @@ record(waveform, "${PV_VALS}"){
     field(FTVL, "FLOAT")
     field(NELM, "17")
 }
+
+record(calc, "${PV_VALS}_enbl"){
+   field(CALC, "A#0")
+   field(INPA, "${PV_VALS}.STAT CP")
+   field(INPB, "${PV_VALS} CP")
+}
+
 ''')
 
 '''
@@ -33,6 +40,7 @@ adc = Template('''
 record(calc, "${PV}${N}_ADC"){
     field(CALC, "((A/10)/4095.)*5.")
     field(INPA, "${PV_VALS}.VAL[${N}] CP MSS")
+
 }
 
 record(calc, "${PV}${N}_CALC"){
@@ -45,6 +53,10 @@ record(calc, "${PV}${N}_CALC"){
     field(INPE, "${p1}")
 
     field(INPF, "${PV}${N}_ADC CP MSS")
+    
+    field(DISV, "1")
+    field(DISS, "INVALID")
+    field(SDIS, "${PV_VALS}_enbl")
 }
 
 record(ao, "${PV_OFS}${N}-Mon"){
@@ -60,6 +72,9 @@ record(calc, "${PV}${N}-Mon"){
     field(INPB, "${PV_OFS}${N}-Mon CP MSS")
     field(PREC, "2")
     field(EGU,  "dBm")
+    field(DISV, "1")
+    field(DISS, "INVALID")
+    field(SDIS, "${PV_VALS}_enbl")
 }
 
 record(calc, "${PV_W}${N}-Mon"){
@@ -67,6 +82,9 @@ record(calc, "${PV_W}${N}-Mon"){
     field(INPA, "${PV}${N}-Mon CP MSS")
     field(PREC, "2")
     field(EGU,  "W")
+    field(DISV, "1")
+    field(DISS, "INVALID")
+    field(SDIS, "${PV_VALS}_enbl")
 }
 ''')
 
