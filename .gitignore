@@ -13,4 +13,6 @@ configure/O.linux-arm/
 db/
 dbd/
 iocBoot/iocRFCalibrationModule/envPaths
+__pycache__/
+*$py.class
 
