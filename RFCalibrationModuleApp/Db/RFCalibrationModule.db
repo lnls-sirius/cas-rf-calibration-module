@@ -43,7 +43,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm1_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm1_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm1_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm1_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm1_ADC CP") # Rec process
@@ -104,7 +104,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm2_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm2_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm2_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm2_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm2_ADC CP") # Rec process
@@ -165,7 +165,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm3_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm3_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm3_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm3_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm3_ADC CP") # Rec process
@@ -226,7 +226,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm4_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm4_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm4_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm4_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm4_ADC CP") # Rec process
@@ -287,7 +287,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm5_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm5_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm5_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm5_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm5_ADC CP") # Rec process
@@ -348,7 +348,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm6_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm6_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm6_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm6_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm6_ADC CP") # Rec process
@@ -409,7 +409,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm7_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm7_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm7_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm7_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm7_ADC CP") # Rec process
@@ -470,7 +470,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm8_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm8_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm8_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm8_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm8_ADC CP") # Rec process
@@ -531,7 +531,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm9_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm9_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm9_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm9_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm9_ADC CP") # Rec process
@@ -592,7 +592,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm10_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm10_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm10_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm10_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm10_ADC CP") # Rec process
@@ -653,7 +653,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm11_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm11_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm11_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm11_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm11_ADC CP") # Rec process
@@ -714,7 +714,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm12_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm12_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm12_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm12_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm12_ADC CP") # Rec process
@@ -775,7 +775,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm13_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm13_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm13_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm13_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm13_ADC CP") # Rec process
@@ -836,7 +836,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm14_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm14_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm14_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm14_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm14_ADC CP") # Rec process
@@ -897,7 +897,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm15_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm15_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm15_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm15_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm15_ADC CP") # Rec process
@@ -958,7 +958,7 @@ record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm16_ADC"){
 
 record(calc, "RA-RaBO01:RF-RFCalSys:PwrdBm16_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm16_ADC CP")
+   field(INPA, "RA-RaBO01:RF-RFCalSys:PwrdBm16_ADC.STAT CP")
    field(INPB, "RA-RaBO01:RF-RFCalSys:Vals_enbl CP")
 
    field(INPC, "RA-RaBO01:RF-RFCalSys:PwrdBm16_ADC CP") # Rec process

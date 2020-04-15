@@ -50,7 +50,7 @@ record(calc, "${PV}${N}_ADC"){
 
 record(calc, "${PV}${N}_enbl"){
    field(CALC, "(A+B)#0")
-   field(INPA, "${PV}${N}_ADC CP")
+   field(INPA, "${PV}${N}_ADC.STAT CP")
    field(INPB, "${PV_VALS}_enbl CP")
 
    field(INPC, "${PV}${N}_ADC CP") # Rec process
