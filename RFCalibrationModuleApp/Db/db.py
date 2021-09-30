@@ -43,6 +43,8 @@ adc = Template(
 record(calc, "${PV}${N}_ADC"){
     field(CALC, "((A/10)/4095.)*5.")
     field(INPA, "${PV_VALS}.VAL[${N}] CP MSS")
+    field(EGU,  "V")
+    field(PREC, "2")
 
     field(LOLO, "0.3")
     field(LLSV, "INVALID")
@@ -58,12 +60,13 @@ record(calc, "${PV}${N}_enbl"){
 
 record(calc, "${PV}${N}_CALC"){
     field(CALC, "A*(F**4) + B*(F**3) + C*(F**2) + D*F + E")
-
     field(INPA, "${p5}")
     field(INPB, "${p4}")
     field(INPC, "${p3}")
     field(INPD, "${p2}")
     field(INPE, "${p1}")
+    field(EGU,  "dBm")
+    field(PREC, "2")
 
     field(INPF, "${PV}${N}_ADC CP MSS")
     
